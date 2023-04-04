@@ -6,7 +6,7 @@ def read_input():
     if "F" in txt:
         filename=input()
         if "a" not in filename:
-            with open(str("test/"+filename), mode="r") as fails:
+            with open(str("./tests/"+filename), mode="r") as fails:
                 pattern = fails.readline()
                 text = fails.readline()
             return (pattern.rstrip(), text.rstrip())
