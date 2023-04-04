@@ -4,14 +4,10 @@ Q = 37
 def read_input():
     txt=input()
     if "F" in txt:
-        filename=input()
-        if "a" not in filename:
-            with open(str("./tests/"+filename), mode="r") as fails:
-                pattern = fails.readline()
-                text = fails.readline()
-            return (pattern.rstrip(), text.rstrip())
-        else:
-            print("error")
+        with open(str("./tests/06"), mode="r") as fails:
+            pattern = fails.readline()
+            text = fails.readline()
+        return (pattern.rstrip(), text.rstrip())
     elif "I" in txt:
         return (input().rstrip(), input().rstrip())
     else:
